@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
-COPY ["AspNetCoreHerokuDocker.csproj", ""]
+COPY *.csproj ./
 RUN dotnet restore 
 COPY . .
 WORKDIR "/src/"
